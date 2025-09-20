@@ -1,0 +1,34 @@
+El programa que creamos tiene como objetivo gestionar las ventas de diferentes departamentos por mes, usando una matriz de 12 filas y
+3 columnas. Cada fila representa un mes y cada columna representa un departamento. Así podemos almacenar, buscar, eliminar y mostrar 
+las ventas fácilmente.
+
+Primero, definimos dos arreglos: uno con los nombres de los meses y otro con los departamentos. Luego creamos una matriz de enteros, 
+llamada ventas, que almacena los valores de ventas. Al principio, todos los valores son cero, indicando que no hay ventas registradas.
+
+El código tiene varios métodos que cumplen funciones específicas.
+
+El método insertarVenta recibe el mes, el departamento y el valor de la venta. Primero busca en qué fila corresponde el mes y en qué 
+columna corresponde el departamento usando los métodos auxiliares buscarIndiceMes y buscarIndiceDepto. Una vez encontrados los índices,
+asigna el valor de la venta en la posición correcta de la matriz.
+
+El método buscarVenta funciona de manera similar: recibe mes y departamento, encuentra los índices correspondientes y devuelve el valor 
+que está guardado en esa posición de la matriz. Si el mes o el departamento no existen, muestra un mensaje de error y devuelve -1.
+
+El método eliminarVenta también busca los índices del mes y departamento, pero en lugar de asignar un valor, pone cero en esa posición, 
+lo que representa que la venta ha sido eliminada.
+
+Para mostrar todas las ventas, usamos el método mostrarTabla. Este recorre la matriz y va imprimiendo cada valor junto con los nombres 
+de los meses y departamentos, formando una tabla en consola. Aunque Java no tiene pandas, este método permite ver la información de
+manera clara y organizada.
+
+Los métodos buscarIndiceMes y buscarIndiceDepto son auxiliares. Se encargan de recorrer los arreglos de meses y departamentos para
+devolver el índice correspondiente al valor ingresado por el usuario. Si no encuentran el valor, devuelven -1, indicando que el dato
+es inválido.
+
+Finalmente, el programa tiene un menú interactivo dentro del método main, que se repite hasta que el usuario decide salir. Permite
+elegir entre insertar una venta, buscarla, eliminarla, mostrar la tabla o salir del programa. Cada opción llama al método correspondiente
+y se comunica con el usuario mediante la consola.
+
+En resumen, este código organiza y gestiona ventas de manera ordenada, usando matrices y métodos para mantener el programa limpio, modular
+y fácil de entender. Cada método tiene una función clara: insertar, buscar, eliminar o mostrar los datos, mientras que el menú permite
+interactuar con la información de forma sencilla.
